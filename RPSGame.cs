@@ -13,22 +13,24 @@ namespace RockPaperScissorsGame
         string one = "rock";
         string two = "paper";
         string three = "scissors";
-        int round = 1;
+        int round;
         int numberOfRounds = 3;
 
-        public void RunGame()
+        public RPSGame()
         {
             //Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
             //Console.WriteLine("Rules are simple! \n You get to choose rock, paper or scissors.");
-            //Console.WriteLine("What is your name?");
-            //this.playerOne = new Player(Console.ReadLine());
-            //Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'NONE'.");
-            //this.playerTwo = new Player(Console.ReadLine());
+            Console.WriteLine("What is your name?");
+            this.playerOne = new Player(Console.ReadLine());
+            Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'none'.");
+            this.playerTwo = new Player(Console.ReadLine());
+            //numberOfRounds = Convert.ToInt32(Console.ReadLine());
+            this.round = 1;
         }
         public string randomAnswer()
         {
             Random number = new Random();
-            int answer = number.Next(0, 2);
+            int answer = number.Next(1, 4);
             switch (answer)
             {
                 case 1:
@@ -44,13 +46,10 @@ namespace RockPaperScissorsGame
             while(round <= numberOfRounds)
             {
                 Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
-                Console.WriteLine("Rules are simple! \nYou get to choose rock, paper or scissors.");
-                Console.WriteLine("What is your name?");
-                this.playerOne = new Player(Console.ReadLine());
-                Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'NONE'.");
-                this.playerTwo = new Player(Console.ReadLine());
-                playerTwo.setChoice(Console.ReadLine());
-                if(playerTwo.getName() == "NONE.toUpper")
+                Console.WriteLine("Rules are simple! You make a choice and your friend or the computer will make a choice.");
+                Console.WriteLine("Pick your choice: rock, paper or scissors {0}?", playerOne.getName());
+                playerOne.setChoice(Console.ReadLine());
+                if (playerTwo.getName() == "none")
                 {
                     playerTwo.setChoice(randomAnswer());
                 }
