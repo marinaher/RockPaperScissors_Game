@@ -20,6 +20,10 @@ namespace RockPaperScissorsGame
         {
             return this.name;
         }
+        public void setChoice(string choice)
+        {
+            this.choice = choice;
+        }
         public string getChoice()
         {
             return this.choice;

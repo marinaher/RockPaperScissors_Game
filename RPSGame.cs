@@ -18,12 +18,12 @@ namespace RockPaperScissorsGame
 
         public void RunGame()
         {
-            Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
-            Console.WriteLine("Rules are simple! \n You get to choose rock, paper or scissors.");
-            Console.WriteLine("What is your name?");
-            this.playerOne = new Player(Console.ReadLine());
-            Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'NONE'.");
-            this.playerTwo = new Player(Console.ReadLine());
+            //Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
+            //Console.WriteLine("Rules are simple! \n You get to choose rock, paper or scissors.");
+            //Console.WriteLine("What is your name?");
+            //this.playerOne = new Player(Console.ReadLine());
+            //Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'NONE'.");
+            //this.playerTwo = new Player(Console.ReadLine());
         }
         public string randomAnswer()
         {
@@ -43,7 +43,21 @@ namespace RockPaperScissorsGame
         {
             while(round <= numberOfRounds)
             {
-                Console.WriteLine("Now, let's get started! \n Do you choose rock, paper or scissors?");
+                Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
+                Console.WriteLine("Rules are simple! \nYou get to choose rock, paper or scissors.");
+                Console.WriteLine("What is your name?");
+                this.playerOne = new Player(Console.ReadLine());
+                Console.WriteLine("Your opponents' name is? \n If you want to play against computer, type in 'NONE'.");
+                this.playerTwo = new Player(Console.ReadLine());
+                playerTwo.setChoice(Console.ReadLine());
+                if(playerTwo.getName() == "NONE.toUpper")
+                {
+                    playerTwo.setChoice(randomAnswer());
+                }
+                else
+                {
+                    Console.WriteLine("Now, do you choose ROCK, PAPER, or SCISSORS?");
+                }
             }
         }
 
