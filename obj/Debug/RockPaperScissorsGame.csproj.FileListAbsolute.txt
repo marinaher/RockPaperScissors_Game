@@ -1,0 +1,6 @@
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\bin\Debug\RockPaperScissorsGame.exe.config
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\obj\Debug\RockPaperScissorsGame.csprojResolveAssemblyReference.cache
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\bin\Debug\RockPaperScissorsGame.exe
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\bin\Debug\RockPaperScissorsGame.pdb
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\obj\Debug\RockPaperScissorsGame.exe
+C:\Users\reald\Documents\GitHub\devCodeCamp Projects\RockPaperScissorsGame\RockPaperScissorsGame\obj\Debug\RockPaperScissorsGame.pdb
