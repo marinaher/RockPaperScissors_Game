@@ -56,7 +56,19 @@ namespace RockPaperScissorsGame
                 }
                 else
                 {
-                    Console.WriteLine("Now, do you choose ROCK, PAPER, or SCISSORS?");
+                    Console.WriteLine("Now, do you choose ROCK, PAPER, or SCISSORS {0}?", playerTwo.getName());
+                    playerTwo.setChoice(Console.ReadLine());
+                }
+                if (playerOne.getChoice() == one && playerTwo.getChoice() == two)
+                {
+                    Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), one, playerTwo.getName(), two);
+                    round++;
+                    playerTwo.addOneToScore();
+                } else if(playerOne.getChoice() == two && playerTwo.getChoice() == one)
+                {
+                    Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), two, playerTwo.getName(), one);
+                    playerOne.addOneToScore();
+                    round++;
                 }
             }
         }

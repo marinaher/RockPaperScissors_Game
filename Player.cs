@@ -15,6 +15,7 @@ namespace RockPaperScissorsGame
         public Player(string name)
         {
             this.name = name;
+            this.score = 0;
         }
         public string getName()
         {
