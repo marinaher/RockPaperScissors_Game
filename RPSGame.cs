@@ -28,7 +28,7 @@ namespace RockPaperScissorsGame
         public string randomAnswer()
         {
             Random number = new Random();
-            int answer = number.Next(1, 3);
+            int answer = number.Next(1, 4);
             switch (answer)
             {
                 case 1:
@@ -46,6 +46,7 @@ namespace RockPaperScissorsGame
                 Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
                 Console.WriteLine("Rules are simple! You make a choice and your friend or the computer will make a choice.");
                 Console.WriteLine("Pick your choice: rock, paper or scissors {0}?", playerOne.getName());
+                Console.WriteLine("Starting scores are: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.setScore(), playerTwo.getName(), playerTwo.setScore());
                 playerOne.setChoice(Console.ReadLine());
                 if (playerTwo.getName() == "computer")
                 {
@@ -53,47 +54,54 @@ namespace RockPaperScissorsGame
                 }
                 else
                 {
-                    Console.WriteLine("Now, do you choose ROCK, PAPER, or SCISSORS {0}?", playerTwo.getName());
+                    Console.WriteLine("{0}, do you choose ROCK, PAPER, or SCISSORS?", playerTwo.getName());
                     playerTwo.setChoice(Console.ReadLine());
                 }
                 if (playerOne.getChoice() == one && playerTwo.getChoice() == two)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), one, playerTwo.getName(), two);
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerTwo.addOneToScore();
                     round++;
-                    //playerTwo.addOneToScore();
                 }
                 else if (playerOne.getChoice() == two && playerTwo.getChoice() == one)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), two, playerTwo.getName(), one);
-                    //playerOne.addOneToScore();
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == three && playerTwo.getChoice() == two)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), three, playerTwo.getName(), two);
-                    //playerOne.addOneToScore();
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == one && playerTwo.getChoice() == three)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), one, playerTwo.getName(), three);
-                    //playerOne.addOneToScore();
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == three && playerTwo.getChoice() == one)
                 {
-                    Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), three, playerTwo.getName(), one);
-                    //playerOne.addOneToScore();
+                    Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), three, playerTwo.getName(), one);
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == playerTwo.getChoice())
                 {
                     Console.WriteLine("It's a TIE");
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
                 }
                 else if (playerOne.getChoice() == two && playerTwo.getChoice() == three)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), two, playerTwo.getName(), three);
-                    //playerTwo.addOneToScore();
+                    Console.WriteLine("Score is: {0} has {1} points and {2} has {3} points!", playerOne.getName(), playerOne.getScore(), playerTwo.getName(), playerTwo.getScore());
+                    playerTwo.addOneToScore();
                     round++;
                 }
                 Console.WriteLine("Do you want to play again? press 'y' or 'n'.");
