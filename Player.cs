@@ -11,6 +11,7 @@ namespace RockPaperScissorsGame
        public string name;
        public string choice;
        public int score;
+       public int round;
 
         public Player(string name)
         {
@@ -40,6 +41,14 @@ namespace RockPaperScissorsGame
         public int setScore()
         {
             return this.score;
+        }
+        public int getRound()
+        {
+            return this.round;
+        }
+        public int setRound()
+        {
+            return this.round;
         }
     }
 }
