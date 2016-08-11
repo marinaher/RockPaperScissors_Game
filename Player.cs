@@ -29,13 +29,13 @@ namespace RockPaperScissorsGame
         {
             return this.choice;
         }
-        public int getScore()
-        {
-            return this.score;
-        }
-        public void addOneToScore()
-        {
-            this.score++;
-        }
+        //public int getScore()
+        //{
+        //    return this.score;
+        //}
+        //public void addOneToScore()
+        //{
+        //    this.score++;
+        //}
     }
 }

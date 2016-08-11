@@ -23,6 +23,7 @@ namespace RockPaperScissorsGame
             Console.WriteLine("Your opponents' name is? \nIf you want to play against computer, type in 'computer'.");
             this.playerTwo = new Player(Console.ReadLine());
             this.round = 1;
+            this.numberOfRounds = 3;
         }
         public string randomAnswer()
         {
@@ -59,24 +60,30 @@ namespace RockPaperScissorsGame
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), one, playerTwo.getName(), two);
                     round++;
-                    playerTwo.addOneToScore();
+                    //playerTwo.addOneToScore();
                 }
                 else if (playerOne.getChoice() == two && playerTwo.getChoice() == one)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), two, playerTwo.getName(), one);
-                    playerOne.addOneToScore();
+                    //playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == three && playerTwo.getChoice() == two)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), three, playerTwo.getName(), two);
-                    playerOne.addOneToScore();
+                    //playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == one && playerTwo.getChoice() == three)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {0} won the round!", playerOne.getName(), one, playerTwo.getName(), three);
-                    playerOne.addOneToScore();
+                    //playerOne.addOneToScore();
+                    round++;
+                }
+                else if (playerOne.getChoice() == three && playerTwo.getChoice() == one)
+                {
+                    Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), three, playerTwo.getName(), one);
+                    //playerOne.addOneToScore();
                     round++;
                 }
                 else if (playerOne.getChoice() == playerTwo.getChoice())
@@ -86,7 +93,7 @@ namespace RockPaperScissorsGame
                 else if (playerOne.getChoice() == two && playerTwo.getChoice() == three)
                 {
                     Console.WriteLine("{0} picked {1} and {2} picked {3}! {2} won the round!", playerOne.getName(), two, playerTwo.getName(), three);
-                    playerTwo.addOneToScore();
+                    //playerTwo.addOneToScore();
                     round++;
                 }
                 Console.WriteLine("Do you want to play again? press 'y' or 'n'.");
