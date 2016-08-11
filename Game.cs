@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsGame
 {
-    class RPSGame
+    class Game
     {
         Player playerOne;
         Player playerTwo;
@@ -17,7 +17,7 @@ namespace RockPaperScissorsGame
         int round = 1;
         int numberOfRounds;
 
-        public RPSGame()
+        public Game()
         {
             Console.WriteLine("Welcome to my Rock Paper Scissors Game!");
             Console.WriteLine("What is your name?");
