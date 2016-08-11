@@ -11,7 +11,7 @@ namespace RockPaperScissorsGame
         static void Main(string[] args)
         {
             RPSGame game = new RPSGame();
-            game.startGame();
+            game.StartGame();
             Console.WriteLine("Good Game!");
             Console.ReadLine();
         }
